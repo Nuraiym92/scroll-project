@@ -301,7 +301,7 @@ nav {
 header {
   min-height: 100vh;
   background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)),
-    url(./hero-bcg.jpeg) center/cover no-repeat;
+    url(https://images.unsplash.com/photo-1617829206657-ca53cbb6b0d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1025&q=80) center/cover no-repeat;
 }
 .banner {
   min-height: 100vh;
@@ -323,11 +323,13 @@ header {
   .container p {
     max-width: 40rem;
   }
+  
 }
 /* sections and title */
 .title h2 {
   text-align: center;
   text-transform: uppercase;
+  margin-top: 100px;
 }
 .title span {
   color: var(--clr-secondary);
@@ -335,7 +337,7 @@ header {
 #about,
 #services,
 #tours {
-  height: 80vh;
+  /* height: 80vh; */
 }
 #services {
   background: var(--clr-white);
@@ -384,4 +386,53 @@ footer p {
   100% {
     transform: scale(1);
   }
+}
+
+.descr-about{
+  width:90%;
+  margin:0 auto;
+ 
+}
+.services-img{
+  width:300px;
+  height:200px;
+  object-fit: contain;
+  position: absolute;
+}
+.service-title{
+  position: relative;
+}
+.service-types {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  background-color: #fff;
+  color: #444;
+  text-align: center;
+}
+
+.box {
+  background-color: var(--clr-secondary);
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+
+  
+}
+.service-img{
+  object-fit: contain;
+  height:450px;
+ 
+}
+.service-title{
+  margin-top: 20px;
+}
+.tours-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  background-color: #fff;
+  color: #444;
+  text-align: center;
 }

@@ -1,7 +1,52 @@
-// Element.getBoundingClientRect() method returns the size of an element and its position relative to the viewport.
-// pageYOffset is a read - only window property that returns the number of pixels the document has been scrolled vertically.
-// slice extracts a section of a string without modifying original string
-//offsetTop - A Number, representing the top position of the element, in pixels
+const tours = [
+    {
+      id: 1,
+      title: "New Your in One day",
+      price: 1500.99,
+      img: 'https://images.unsplash.com/flagged/photo-1575597255483-55f2afb6f42c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
+     
+    },
+    {
+      id: 2,
+      title: "Eiffel Tower Summit",
+     price: 1343.99,
+      img:  'https://images.unsplash.com/photo-1576519818621-041ec8dce302?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
+      
+    },
+    {
+      id: 3,
+      title: "Panama Tour",
+      category: "shakes",
+      price: 3566.99,
+      img: 'https://images.unsplash.com/photo-1475066392170-59d55d96fe51?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
+     
+    }
+]
+const toursItems=document.querySelector(".tours-items")
+window.addEventListener("DOMContentLoaded", function () {
+    displayMenuItems(tours);
+   });
+  
+  function displayMenuItems(menuItems) {
+    let displayMenu = menuItems.map(function (item) {
+
+  
+      return `<article class="menu-item">
+            <img src=${item.img} alt=${item.title} class="photo" />
+            <div class="item-info">
+              <div>
+                <h4>${item.title}</h4>
+                <h4 class="price">$${item.price}</h4>
+              </div>
+              
+            </div>
+          </article>`;
+    });
+    displayMenu = displayMenu.join("");
+
+  
+    toursItems.innerHTML = displayMenu;
+  }
 
 // ********** set date ************
 const date=document.getElementById("date")
@@ -71,3 +116,4 @@ scrollLinks.forEach(function(link){
         linksContainer.style.height=0;
     })
 })
+
